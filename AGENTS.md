@@ -41,8 +41,8 @@ npm run preview  # 本地预览生产构建
 
 - **入口：** `src/main.js` → 挂载 `src/App.vue`
 - **组件：** `src/components/` — `Header.vue`、`Stats.vue`、`Card.vue`（最大文件，~640 行，含图表和弹窗）、`Footer.vue`
-- **工具：** `src/utils/` — `api.js`（Axios 调用 UptimeRobot）、`monitor.js`（数据处理）、`chartConfig.js`（Chart.js 配置）
-- **API 代理（两套实现）：**
+- **工具：** `src/utils/` — `api.js`（调用 UptimeRobot v3 API）、`monitor.js`（数据处理）、`chartConfig.js`（Chart.js 配置）
+- **API 代理（两套实现，通用转发 + Bearer 认证）：**
   - `api/status.js` — Vercel serverless 函数
   - `functions/api/status.js` — EdgeOne Pages / Cloudflare Pages edge function
 - **`@` 别名** 映射到 `src/`（在 `vite.config.js` 中配置）
@@ -54,6 +54,7 @@ npm run preview  # 本地预览生产构建
 - Tailwind 暗色模式使用 `class` 策略 — 通过 `document.documentElement.classList` 切换
 - `vue-router` 在依赖中但**源码中未使用**
 - Chart.js 通过 `vue-chartjs` 封装在 `Card.vue` 中使用
+- UptimeRobot v3 API 免费版限 10 req/min，`api.js` 中每请求间隔 6.5s 以避免 429
 
 ## 部署
 
