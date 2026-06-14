@@ -88,8 +88,13 @@
             rel="noopener noreferrer"
             class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
           >
-            JLinmr
-          </a>
+            辰渊尘
+          </a>（原作者 <a 
+            href="https://www.bsgun.cn"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+          >JLinmr</a>）
         </div>
       </div>
     </div>
